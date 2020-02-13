@@ -63,6 +63,8 @@
   background-color: $blue;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
+
 
 
   &:hover {
@@ -106,5 +108,31 @@
   .promo__button {
     margin-left: 116px;
     padding: 18px 31px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .promo {
+    margin-top: 241px;
+  }
+
+  .promo__title {
+    padding-left: 0;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .promo__description {
+    max-width: 350px;
+
+    margin-left: 0;
+    margin-bottom: 44px;
+
+    font-size: 16px;
+  }
+
+  .promo__button {
+    margin-left: 0
   }
 }
