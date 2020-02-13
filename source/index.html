@@ -7,7 +7,62 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-  <h1 class="h1">Добро пожаловать в Лигу А.</h1>
+
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <h1 class="visually-hidden">шапка страницы</h1>
+    <div class="page-header-contacts-wrapper desktop-wrapper">
+      <div class="page-header__logo">
+        <span class="page-header__logo-icon">
+          <svg width="52" height="52">
+            <use xlink:href="#icon-mind"></use>
+          </svg>
+        </span>
+        <h2 class="page-header__logo-title">Smart Device</h2>
+        <span class="page-header__logo-caption">умные технологии</span>
+      </div>
+
+      <section class="page-header__contacts">
+        <a class="page-header__contacts-link page-header__contacts-link--mail link-mixin" href="mailto:info@sd.ru">
+          <span class="page-header__contacts-icon">
+            <svg width="18" height="14">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+          </span>
+          <span class="page-header__contacts-info">info@sd.ru</span>
+        </a>
+        <a class="page-header__contacts-link page-header__contacts-link--tel link-mixin" href="tel:+74950005252">
+          <span class="page-header__contacts-icon">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-tel"></use>
+            </svg>
+          </span>
+          <span class="page-header__contacts-info">+7 (495) 000 52 52</span>
+        </a>
+        <a class="page-header__contacts-call link-mixin" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+      </section>
+    </div>
+
+    <section class="promo desktop-wrapper">
+      <h2 class="promo__title" >ПЕЧАТНЫЕ ПЛАТЫ</h2>
+      <p class="promo__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <button class="promo__button" type="button">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</button>
+      <picture>
+        <source type="image/webp" media="(min-width: 1150px)" srcset="./img/microplate-desktop@1x.webp, ./img/microplate-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/microplate-tablet@1x.webp, ./img/microplate-tablet@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 320px)" srcset="./img/microplate-mobile@1x.webp, ./img/microplate-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1150px)" srcset="./img/microplate-desktop@1x.jpg, ./img/microplate-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="./img/microplate-tablet@1x.jpg, ./img/microplate-tablet@2x.jpg 2x">
+        <source media="(min-width: 320px)" srcset="./img/microplate-mobile@1x.jpg, ./img/microplate-mobile@2x.jpg 2x">
+        <img class="promo__image" src="./img/microplate-desktop@1x.jpg" alt="microplate">
+      </picture>
+    </section>
+  </header>
+
   <script src="./js/main.js"></script>
 </body>
 </html>

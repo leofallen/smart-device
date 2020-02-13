@@ -1,0 +1,73 @@
+.promo {
+  position: relative;
+  margin-top: 231px;
+}
+
+.promo__title {
+  max-width: 720px;
+
+  margin: 0;
+  margin-bottom: 26px;
+
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  color: $white;
+}
+
+.promo__description {
+  position: relative;
+
+  max-width: 720px;
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 43px;
+  padding-left: 92px;
+
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 0;
+
+    width: 66px;
+    height: 2px;
+
+    background-color: $white;
+  }
+}
+
+.promo__button {
+  margin-left: 92px;
+  padding: 18px 45px;
+
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $white;
+  background-color: $blue;
+  border: none;
+  border-radius: 3px;
+}
+
+.promo__image {
+  position: absolute;
+  top: -58px;
+  right: -72px;
+
+}

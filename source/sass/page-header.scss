@@ -1,0 +1,78 @@
+.page-header-contacts-wrapper {
+  display: flex;
+}
+
+.page-header {
+  min-height: 878px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 35px 10px;
+
+  background-image: url('../img/header-bg@1x.jpg');
+  background-position: center 0;
+}
+
+.page-header__logo {
+  position: relative;
+
+
+  margin-right: auto;
+  padding-top: 4px;
+  padding-left: 66px;
+}
+
+.page-header__logo-icon {
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.page-header__logo-title {
+  margin: 0;
+
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 28px;
+  white-space: nowrap;
+  color: $white;
+}
+
+.page-header__logo-caption {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $font-dark-grey;
+}
+
+.page-header__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__contacts-link {
+  display: flex;
+  margin-left: 88px;
+}
+
+.page-header__contacts-info {
+  margin-left: 16px;
+}
+
+.page-header__contacts-call {
+  display: block;
+
+  margin-left: 49px;
+  padding: 14px 32px;
+
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid $white;
+  border-radius: 6px;
+}
