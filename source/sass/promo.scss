@@ -63,11 +63,48 @@
   background-color: $blue;
   border: none;
   border-radius: 3px;
+
+
+  &:hover {
+    box-shadow: 0 0 3px 3px $milk-white;
+  }
 }
 
 .promo__image {
   position: absolute;
   top: -58px;
   right: -72px;
+}
 
+@media (max-width: $tablet-max-width) {
+  .promo {
+    margin-top: 118px;
+  }
+
+  .promo__title {
+    max-width: 545px;
+    padding-left: 65px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .promo__description {
+    max-width: 545px;
+    margin-left: 65px;
+    margin-bottom: 56px;
+    padding-left: 50px;
+
+    font-size: 18px;
+    line-height: 156.8%;
+
+    &::before {
+      width: 32px;
+    }
+  }
+
+  .promo__button {
+    margin-left: 116px;
+    padding: 18px 31px;
+  }
 }
