@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Стартовый шаблон</title>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
@@ -61,7 +65,7 @@
 
   <header class="page-header">
     <h1 class="visually-hidden">шапка страницы</h1>
-    <div class="page-header-contacts-wrapper desktop-wrapper">
+    <div class="page-header-contacts-wrapper desktop-wrapper-mixin">
       <div class="page-header__logo">
         <span class="page-header__logo-icon-wrapper">
           <svg class="page-header__logo-icon" width="52" height="52">
@@ -94,38 +98,53 @@
       </section>
     </div>
 
-    <section class="promo desktop-wrapper">
+    <section class="promo desktop-wrapper-mixin">
       <h2 class="promo__title">ПЕЧАТНЫЕ ПЛАТЫ</h2>
       <p class="promo__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="promo__button" type="button">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</button>
+      <button class="promo__button" type="button">
+        <span class="promo__button-full-caption">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</span>
+        <span class="promo__button-short-caption">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
+      </button>
     </section>
+    <picture>
+      <source type="image/webp" media="(min-width: 1024px)" srcset="./img/microplate-desktop@1x.webp, ./img/microplate-desktop@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="./img/microplate-tablet@1x.webp, ./img/microplate-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="./img/microplate-mobile@1x.webp, ./img/microplate-mobile@2x.webp 2x">
+      <source media="(min-width: 1024px)" srcset="./img/microplate-desktop@1x.jpg, ./img/microplate-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="./img/microplate-tablet@1x.jpg, ./img/microplate-tablet@2x.jpg 2x">
+      <source srcset="./img/microplate-mobile@1x.jpg, ./img/microplate-mobile@2x.jpg 2x">
+      <img class="page-header__image" src="./img/microplate-desktop@1x.jpg" alt="microplate">
+    </picture>
   </header>
+<!--
+  <footer class="page-footer desktop-wrapper-mixin">
 
-  <footer class="page-footer">
-
-    <ul class="page-footer__list page-footer__social">
-      <li class="page-footer__social-item page-footer__logo">
+    <ul class="page-footer__social page-footer__list">
+      <li class="page-footer__logo page-footer__social-item  page-footer__list-item">
             <svg class="page-footer__logo-icon" width="52" height="52">
               <use xlink:href="#icon-mind"></use>
             </svg>
-          <h2 class="page-footer__logo-title">Smart Device</h2>
+          <h2 class="page-footer__logo-title">Service Device</h2>
           <span class="page-footer__logo-caption">умные технологии</span>
       </li>
-      <li class="page-footer__social-item">
-        <span class="page-footer__social-date">1999-2018 SD SERVICE DEVICES</span>
+      <li class="page-footer__social-item page-footer__list-item">
+        <span class="page-footer__social-date" >1999-2018 SD SERVICE DEVICES</span>
       </li>
-      <li class="page-footer__social-item">
-        <a class="page-footer__social-link" href="#">Фейсбук
+      <li class="page-footer__social-icons page-footer__social-item page-footer__list-item">
+        <a class="page-footer__social-link" href="#">
+          Фейсбук
           <svg class="page-footer__icon" width="27" height="27">
             <use xlink:href="#icon-fb"></use>
           </svg>
         </a>
-        <a class="page-footer__social-link" href="#">Однокласники
+        <a class="page-footer__social-link" href="#">
+          Однокласники
           <svg class="page-footer__icon" width="27" height="27">
             <use xlink:href="#icon-ok"></use>
           </svg>
         </a>
-        <a class="page-footer__social-link" href="#">В контакте
+        <a class="page-footer__social-link" href="#">
+          В контакте
           <svg class="page-footer__icon" width="27" height="27">
             <use xlink:href="#icon-vk"></use>
           </svg>
@@ -134,55 +153,55 @@
     </ul>
 
     <ul class="page-footer__sections page-footer__list">
-      <li class="page-footer__sections-title">РАЗДЕЛЫ САЙТА</li>
-      <li class="page-footer__sections-item">
+      <li class="page-footer__sections-title page-footer__list-item page-footer--title">РАЗДЕЛЫ САЙТА</li>
+      <li class="page-footer__sections-item page-footer__list-item">
         <a href="#">О компании</a>
       </li>
-      <li class="page-footer__sections-item">
+      <li class="page-footer__sections-item page-footer__list-item">
         <a href="#">Продукты</a>
       </li>
-      <li class="page-footer__sections-item">
+      <li class="page-footer__sections-item page-footer__list-item">
         <a href="#">Производство печатных плат</a>
       </li>
-      <li class="page-footer__sections-item">
+      <li class="page-footer__sections-item page-footer__list-item">
         <a href="#">Монтаж печатных плат</a>
       </li>
     </ul>
 
-    <ul class="page-footer__servis page-footer__list">
-      <li>
-        <a href="#">Комплектующие</a>
+    <ul class="page-footer__service page-footer__list">
+      <li class="page-footer__list-item">
+        <a class="page-footer__service-link" href="#">Комплектующие</a>
       </li>
-      <li>
-        <a href="#">Доставка</a>
+      <li class="page-footer__list-item">
+        <a class="page-footer__service-link" href="#">Доставка</a>
       </li>
-      <li>
-        <a href="#">Контакты</a>
+      <li class="page-footer__list-item">
+        <a class="page-footer__service-link" href="#">Контакты</a>
       </li>
-    </ul>
-
-    <ul class="page-footer__list">
-      <li></li>
-      <li></li>
-      <li></li>
     </ul>
 
     <ul class="page-footer__adres page-footer__list">
-      <li class="page-footer__adres-title">НАШ ОФИС</li>
-      <li>г. Мытищи, Олимпийский проспект, д.10</li>
-      <li><a href="tel:84955894050">+7 (495) 589-40-50</a></li>
-      <li><a href="tel:89250038767">+7 (925) 003-87-67</a></li>
-      <li><a href="tel:892692608079">+7 (926) 926-080-79</a></li>
+      <li class="page-footer__adres-title page-footer__list-item page-footer--title">НАШ ОФИС</li>
+      <li class="page-footer__list-item">г. Мытищи, Олимпийский проспект, д.10</li>
+      <li class="page-footer__list-item">
+        <a class="page-footer__adres-link" href="tel:84955894050">+7 (495) 589-40-50</a>
+      </li>
+      <li class="page-footer__list-item">
+        <a class="page-footer__adres-link" href="tel:89250038767">+7 (925) 003-87-67</a>
+      </li>
+      <li class="page-footer__list-item">
+        <a class="page-footer__adres-link" href="tel:892692608079">+7 (926) 926-080-79</a>
+      </li>
     </ul>
 
-    <ul class="page-footer__copyright">
-      <li>ВСЕ ПРАВА ЗАЩИЩЕНЫ</li>
-      <li>1999-2018 SD SERVICE DEVICES</li>
-      <li>УСЛОВИЯ КОНФИДЕЦИАЛЬНОСТИ</li>
-      <li>DEVELOPED BY WOW STUDIO</li>
+    <ul class="page-footer__copyright page-footer__list">
+      <li class="page-footer__list-item">ВСЕ ПРАВА ЗАЩИЩЕНЫ</li>
+      <li class="page-footer__list-item">1999-2018 SD SERVICE DEVICES</li>
+      <li class="page-footer__list-item">УСЛОВИЯ КОНФИДЕЦИАЛЬНОСТИ</li>
+      <li class="page-footer__list-item">DEVELOPED BY WOW STUDIO</li>
     </ul>
 
-  </footer>
+  </footer> -->
 
   <script src="./js/main.js"></script>
 </body>

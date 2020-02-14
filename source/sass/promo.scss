@@ -1,5 +1,5 @@
 .promo {
-  position: relative;
+  z-index: 1;
   margin-top: 231px;
 }
 
@@ -65,17 +65,17 @@
   border-radius: 3px;
   cursor: pointer;
 
-
-
   &:hover {
     box-shadow: 0 0 3px 3px $milk-white;
   }
 }
 
-.promo__image {
-  position: absolute;
-  top: -58px;
-  right: -72px;
+.promo__button-full-caption {
+  display: block;
+}
+
+.promo__button-short-caption {
+  display: none;
 }
 
 @media (max-width: $tablet-max-width) {
@@ -114,6 +114,8 @@
 @media (max-width: $mobile-max-width) {
   .promo {
     margin-top: 241px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .promo__title {
@@ -133,6 +135,15 @@
   }
 
   .promo__button {
-    margin-left: 0;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .promo__button-full-caption {
+    display: none;
+  }
+
+  .promo__button-short-caption {
+    display: block;
   }
 }
