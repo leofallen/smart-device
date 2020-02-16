@@ -16,7 +16,7 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 25px;
-  color: $font-grey;
+  color: $footer-font-grey;
 }
 
 .page-footer--title {
@@ -126,7 +126,7 @@
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  color: $font-grey;
+  color: $footer-font-grey;
 
   &::before {
     content: "";
@@ -137,7 +137,7 @@
     width: 3000%;
     height: 1px;
 
-    background-color: $font-grey;
+    background-color: $footer-font-grey;
   }
 }
 
@@ -167,7 +167,7 @@
       position: absolute;
       width: 16px;
       height: 2px;
-      background-color: $font-grey;
+      background-color: $footer-font-grey;
       top: 35px;
       right: 0;
     }
@@ -177,7 +177,7 @@
       position: absolute;
       width: 2px;
       height: 16px;
-      background-color: $font-grey;
+      background-color: $footer-font-grey;
       top: 28px;
       right: 7px;
     }
@@ -191,7 +191,7 @@
       position: absolute;
       width: 16px;
       height: 2px;
-      background-color: $font-grey;
+      background-color: $footer-font-grey;
       top: 35px;
       right: 0;
     }
@@ -220,7 +220,7 @@
       width: 3000%;
       height: 1px;
 
-      background-color: $font-grey;
+      background-color: $footer-font-grey;
     }
   }
 
@@ -301,7 +301,7 @@
       width: 3000%;
       height: 1px;
 
-      background-color: $font-grey;
+      background-color: $footer-font-grey;
     }
   }
 
