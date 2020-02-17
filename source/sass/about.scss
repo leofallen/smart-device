@@ -65,7 +65,16 @@
   border-radius: 5px;
 }
 
+.about__description-overflow {
+  display: none;
+}
+
 @media (max-width: $tablet-max-width) {
+  .about {
+    padding-right: 28px;
+    padding-bottom: 87px;
+  }
+
   .about__title {
     margin-bottom: 22px;
     padding-left: 5px;
@@ -87,10 +96,15 @@
   }
 
   .about__description-overflow {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: inline;
+    // width: 150px;
+    // // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+  }
+
+  .about__description-overflow-hidden {
+    display: none;
   }
 }
 
@@ -122,8 +136,5 @@
 
   .about__description-overflow {
     width: 150px;
-  }
-  .about__description {
-    // padding: 0;
   }
 }

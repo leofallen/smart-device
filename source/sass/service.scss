@@ -1,13 +1,15 @@
 .service-content-wrapper {
+  display: flex;
+  justify-content: center;
   background-color: $dark-blue;
 }
 
 .service {
+  width: 1235px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-
-  padding: 60px 122px;
+  padding-top: 60px;
+  padding-bottom: 82px;
 
   font-size: 0;
 }
@@ -15,6 +17,7 @@
 .service__title {
   flex-grow: 1;
   width: 100%;
+  margin-left: 30px;
   margin-bottom: 52px;
 
   font-family: ("Roboto Condensed");
@@ -27,6 +30,8 @@
 
 .service__item {
   position: relative;
+  margin-left: 30px;
+  margin-bottom: 30px;
 
   &::after {
     content: "";
@@ -59,4 +64,69 @@
 
 .service__image {
   opacity: 0.2;
+}
+
+@media (max-width: 1230px) {
+  .service {
+    flex-direction: row;
+
+    justify-content: center;
+    margin-left: 0;
+    padding-top: 22px;
+    padding-left: 26px;
+    padding-right: 22px;
+    padding-bottom: 29px;
+  }
+
+  .service__item {
+    margin-left: 0;
+    margin-bottom: 47px;
+  }
+
+  .service__title {
+    margin-left: 0;
+    padding-right: 100px;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .service__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .service__item-title {
+    top: 40px;
+    left: 43px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .service {
+    flex-direction: column;
+    padding-top: 22px;
+    padding-left: 15px;
+    padding-bottom: 33px;
+    padding-right: 15px;
+  }
+
+  .service__item {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  .service__item-title {
+    top: 20px;
+    left: 35px;
+  }
+
+  .service__title {
+    margin-top: 27px;
+    padding-left: 9px;
+    margin-bottom: 43px;
+    padding-right: 0;
+
+    font-size: 28px;
+    line-height: 140.62%;
+  }
 }
