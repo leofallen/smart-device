@@ -1,0 +1,129 @@
+.about {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 1227px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-left: 210px;
+  padding-right: 30px;
+  padding-bottom: 110px;
+}
+
+.about__image {
+  position: absolute;
+  left: 0;
+  top: 33px;
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-family: ("Roboto Condensed");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $main-font-grey;
+}
+
+.about__description {
+  margin: 0;
+
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $main-font-grey;
+}
+
+.about__description:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+
+.about__description:nth-of-type(2) {
+  margin-bottom: 40px;
+}
+
+.about__more {
+  width: 180px;
+  padding: 12px;
+
+  font-family: ("Roboto Condensed");
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $blue;
+
+  border: 1px solid $blue;
+  border-radius: 5px;
+}
+
+@media (max-width: $tablet-max-width) {
+  .about__title {
+    margin-bottom: 22px;
+    padding-left: 5px;
+
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .about__image {
+    top: 25px;
+    left: -7px;
+
+    width: 167px;
+    height: auto;
+  }
+
+  .about__description {
+    padding-left: 2px;
+  }
+
+  .about__description-overflow {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .about {
+    padding-top: 35px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .about__image {
+    display: none;
+  }
+
+  .about__title {
+    padding: 0;
+
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+
+  .about__description:nth-of-type(1) {
+    margin-bottom: 40px;
+  }
+
+  .about__description:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+
+  .about__description-overflow {
+    width: 150px;
+  }
+  .about__description {
+    // padding: 0;
+  }
+}
