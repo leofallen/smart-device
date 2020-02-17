@@ -123,32 +123,55 @@
       <a class="about__more" href="#">ПОДРОБНЕЕ</a>
     </section>
 
-    <!-- <section class="service">
-      <h2>Service Device предлагает следующие товары и услуги</h2>
-      <articl>
-        <span>Производство  печатных плат</span>
-          <picture>
+    <div class="service-content-wrapper desktop-wrapper-mixin">
+      <section class="service">
+        <h2 class="service__title">Service Device предлагает следующие товары и услуги</h2>
+        <a class="service__item" href="#">
+          <article>
+            <span class="service__item-title">Производство печатных плат</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="./img/service-microplate-desktop@1x.webp, ./img/service-microplate-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/service-microplate-tablet@1x.webp, ./img/service-microplate-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 320px)" srcset="./img/service-microplate-mobile@1x.webp, ./img/service-microplate-mobile@2x.webp 2x">
+                <source media="(min-width: 1024px)" srcset="./img/service-microplate-desktop@1x.jpg, ./img/service-microplate-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./img/service-microplate-tablet@1x.jpg, ./img/service-microplate-tablet@2x.jpg 2x">
+                <source media="(min-width: 320px)" srcset="./img/service-microplate-mobile@1x.jpg, ./img/service-microplate-mobile@2x.jpg 2x">
+                <img class="service__image" src="./img/service-microplate-desktop@1x.jpg" alt="microplate">
+              </picture>
+          </article>
+        </a>
+        <a class="service__item" href="#">
+          <article>
+            <span class="service__item-title">Монтаж печатных плат</span>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/service-mounting-desktop@1x.webp, ./img/service-mounting-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/service-mounting-tablet@1x.webp, ./img/service-mounting-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="./img/service-mounting-mobile@1x.webp, ./img/service-mounting-mobile@2x.webp 2x">
+              <source media="(min-width: 1024px)" srcset="./img/service-mounting-desktop@1x.jpg, ./img/service-mounting-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/service-mounting-tablet@1x.jpg, ./img/service-mounting-tablet@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="./img/service-mounting-mobile@1x.jpg, ./img/service-mounting-mobile@2x.jpg 2x">
+              <img class="service__image" src="./img/service-mounting-desktop@1x.jpg" alt="mountain">
+            </picture>
+          </article>
+        </a>
+        <a class="service__item" href="#">
+          <article>
+            <span class="service__item-title">Комплектующие для светотехники</span>
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/service-diode-desktop@1x.webp, ./img/service-diode-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/service-diode-tablet@1x.webp, ./img/service-diode-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="./img/service-diode-mobile@1x.webp, ./img/service-diode-mobile@2x.webp 2x">
+              <source media="(min-width: 1024px)" srcset="./img/service-diode-desktop@1x.jpg, ./img/service-diode-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/service-diode-tablet@1x.jpg, ./img/service-diode-tablet@2x.jpg 2x">
+              <source media="(min-width: 320px)" srcset="./img/service-diode-mobile@1x.jpg, ./img/service-diode-mobile@2x.jpg 2x">
+              <img class="service__image" src="./img/service-diode-desktop@1x.jpg" alt="diode">
+            </picture>
+          </article>
+        </a>
+      </section>
+    </div>
 
-            <img src="./img/service-microplate-desktop@1x.jpg" alt="microplate">
-          </picture>
-      </articl>
-      <articl>
-        <span>Монтаж печатных плат</span>
-        <picture>
-
-          <img src="./img/service-mounting-desktop@1x.jpg" alt="mountain">
-        </picture>
-      </articl>
-      <articl>
-        <span>Комплектующие для светотехники</span>
-        <picture>
-
-          <img src="./img/service-diode-desktop@1x.jpg" alt="diode">
-        </picture>
-      </articl>
-    </section>
-
-    <section class="feedback">
+    <!-- <section class="feedback">
       <picture>
         <source type="image/webp" srcset="./img/airplane-desktop@1x.webp, ./img/airplane-desktop@2x.webp 2x">
         <source srcset="./img/airplane-desktop@1x.png, ./img/airplane-desktop@2x.png 2x">
