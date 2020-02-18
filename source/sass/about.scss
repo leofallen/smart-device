@@ -69,6 +69,52 @@
   display: none;
 }
 
+.about__triangle {
+  position: absolute;
+  z-index: -1;
+}
+
+.about__triangle--1 {
+  top: -751px;
+  left: -156px;
+
+  width: 250px;
+  height: auto;
+
+  transform: rotate(-90deg);
+}
+
+.about__triangle--2 {
+  top: -550px;
+  left: 400px;
+
+  transform: rotate(-30deg);
+}
+
+.about__triangle--3 {
+  top: -194px;
+  left: 426px;
+  width: 221px;
+  transform: rotate(-30deg);
+  height: auto;
+}
+
+.about__triangle--4 {
+  top: -31px;
+  left: -420px;
+  width: 400px;
+  transform: rotate(-90deg);
+  height: auto;
+}
+
+.about__triangle--5 {
+  top: -382px;
+  left: 1221px;
+  width: 280px;
+  height: auto;
+  transform: rotate(-30deg);
+}
+
 @media (max-width: $tablet-max-width) {
   .about {
     padding-right: 28px;

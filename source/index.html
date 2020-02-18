@@ -54,10 +54,11 @@
     <section class="promo desktop-wrapper-mixin">
       <h2 class="promo__title" >ПЕЧАТНЫЕ ПЛАТЫ</h2>
       <p class="promo__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="promo__button" type="button">
+      <a class="promo__button" href="#feedback">
         <span class="promo__button-full-caption">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</span>
         <span class="promo__button-short-caption">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
-      </button>
+      </a>
+      <a class="promo__scroll-down" href="#advantages">Скролл вниз</a>
     </section>
     <picture>
       <source type="image/webp" media="(min-width: 1024px)" srcset="./img/microplate-desktop@1x.webp, ./img/microplate-desktop@2x.webp 2x">
@@ -73,7 +74,7 @@
 
   <main class="page-main">
 
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <h2 class="visually-hidden">преимущества</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--time">
@@ -111,6 +112,7 @@
       <picture>
         <source type="image/webp" srcset="./img/2005-desktop@1x.webp, ./img/2005-desktop@2x.webp 2x">
         <source srcset="./img/2005-desktop@1x.png, ./img/2005-desktop@2x.png 2x">
+          <!-- 1x  147px: 2x 294px: -->
         <img class="about__image" src="./img/2005-desktop@1x.png" width="145" height="317" alt="2005">
       </picture>
       <h2 class="about__title">О компании</h2>
@@ -121,6 +123,11 @@
         Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__description-overflow">..</span><span class="about__description-overflow-hidden"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
       </p>
       <a class="about__more" href="#">ПОДРОБНЕЕ</a>
+      <img class="about__triangle about__triangle--1" src="./img/triangle.svg" width="300" height="300"></img>
+      <img class="about__triangle about__triangle--2" src="./img/triangle.svg" width="300" height="300"></img>
+      <img class="about__triangle about__triangle--3" src="./img/triangle.svg" width="300" height="300"></img>
+      <img class="about__triangle about__triangle--4" src="./img/triangle.svg" width="300" height="300"></img>
+      <img class="about__triangle about__triangle--5" src="./img/triangle.svg" width="300" height="300"></img>
     </section>
 
     <div class="service-content-wrapper desktop-wrapper-mixin">
@@ -171,7 +178,7 @@
       </section>
     </div>
 
-    <section class="feedback">
+    <section class="feedback desktop-wrapper-mixin" id="feedback">
       <div class="feedback__wrapper">
         <picture>
           <source type="image/webp" srcset="./img/airplane-desktop@1x.webp, ./img/airplane-desktop@2x.webp 2x">
@@ -183,12 +190,12 @@
           <h2 class="feedback__form-title">Остались вопросы? Задайте их нам!</h2>
           <span class="feedback__form-caption">Мы проконсультируем Вас бесплатно</span>
           <form action="#">
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Телефон">
+            <input type="text" placeholder="Имя" required>
+            <input type="text" placeholder="Телефон" pattern="(\+7[0-9]{10}|8[0-9]{10})" required>
             <textarea name="user-quest" id="user-quest" cols="30" rows="9" placeholder="Ваш вопрос"></textarea>
             <button type="submit">ЗАДАТЬ ВОПРОС</button>
             <div class="feedback__form-confirm">
-              <input class="visually-hidden" type="checkbox" id="confirm">
+              <input class="visually-hidden" type="checkbox" id="confirm" required>
               <label for="confirm">
                 <span class="feedback__form-confirm-title">Я согласен на обработку персональных данных</span>
               </label>
@@ -236,20 +243,34 @@
       </ul>
       <div class="page-footer__sections">
         <h2 class="page-footer__title">РАЗДЕЛЫ САЙТА</h2>
-        <div class="page-footer__button page-footer__button--open"></div>
+        <button class="page-footer__button page-footer__button--open"></button>
         <ul class="page-footer__list">
-          <li class="page-footer__list-item">О компании</li>
-          <li class="page-footer__list-item">Продукты</li>
-          <li class="page-footer__list-item">Производство печатных плат</li>
-          <li class="page-footer__list-item">Монтаж печатных плат</li>
-          <li class="page-footer__list-item">Комплектующие</li>
-          <li class="page-footer__list-item">Доставка</li>
-          <li class="page-footer__list-item">Контакты</li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">О компании</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">Продукты</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">Производство печатных плат</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">Монтаж печатных плат</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">Комплектующие</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">Доставка</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="#">Контакты</a>
+          </li>
         </ul>
-      </div class="page-footer__sections">
+      </div>
       <div class="page-footer__adres">
         <h2 class="page-footer__title">НАШ ОФИС</h2>
-        <div class="page-footer__button page-footer__button--open"></div>
+        <button class="page-footer__button page-footer__button--open"></button>
         <ul class="page-footer__list">
           <li class="page-footer__list-item">г. Мытищи, Олимпийский проспект, д.10</li>
           <li class="page-footer__list-item">+7 (495) 589-40-50</li>
@@ -266,6 +287,31 @@
     </div>
   </footer>
 
-  <script src="./js/main.js"></script>
+    <div class="call-popap">
+      <div class="call-popap__overlay"></div>
+      <div class="call-popap__wrapper">
+        <div class="call-popap__form-wrapper">
+          <button class="call-popap__close-button"></button>
+          <h2 class="call-popap__form-title">Закажите звонок</h2>
+          <span class="call-popap__form-caption">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+          <form action="#">
+            <input type="text" placeholder="Имя" name="name" autofocus required>
+            <input type="text" placeholder="Телефон" name="tel" pattern="(\+7[0-9]{10}|8[0-9]{10})" required>
+            <textarea name="user-quest" id="user-quest" cols="30" rows="9" placeholder="Ваш вопрос"></textarea>
+            <button type="submit">ЗАДАТЬ ВОПРОС</button>
+            <div class="call-popap__form-confirm">
+              <input class="visually-hidden" type="checkbox" id="call-confirm">
+              <label for="call-confirm">
+                <span class="call-popap__form-confirm-title">Я согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/picturefill.js"></script>
+
 </body>
 </html>

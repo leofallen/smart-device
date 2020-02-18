@@ -1,0 +1,208 @@
+.call-popap {
+  display: none;
+}
+
+.call-popap__wrapper {
+  position: fixed;
+  z-index: 999;
+  top: calc(50% - 320px);
+  left: calc(50% - 245px);
+  width: 490px;
+  padding: 40px;
+  margin: auto;
+  background-color: $blue;
+}
+
+.call-popap__overlay {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 29, 29, 0.281);
+}
+
+.call-popap__form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-popap__form-wrapper form input[type="text"] {
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $light-blue;
+
+  color: $white;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 0 5px 2px $white;
+  }
+}
+
+.call-popap__form-wrapper form textarea::placeholder,
+.call-popap__form-wrapper form input[type="text"]::placeholder {
+
+  font-family: ("PT Mono;");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.call-popap__form-wrapper form textarea {
+  width: 100%;
+  flex-grow: 1;
+  margin-bottom: 30px;
+  padding: 18px;
+
+  background-color: $light-blue;
+  border: none;
+
+  color: $white;
+
+  &:hover {
+    box-shadow: 0 0 5px 2px $white;
+  }
+}
+
+.call-popap__form-title {
+  margin-top: 0;
+  margin-bottom: 9px;
+
+  font-family: ("Roboto Condensed");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 140.62%;
+  color: $white;
+}
+
+.call-popap__form-caption {
+  margin-bottom: 35px;
+
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.call-popap__form-wrapper form button {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 30px;
+
+  font-family: ("Roboto Condensed");
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 3px;
+
+  &:hover {
+    box-shadow: 0 0 5px 2px $white;
+  }
+}
+
+.call-popap__form-confirm {
+  padding-top: 8px;
+}
+
+.call-popap__form-confirm-title {
+  display: inline-block;
+  width: 337px;
+}
+
+.call-popap__form-confirm label {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
+
+.call-popap__form-confirm input:checked + label::after {
+  opacity: 1;
+}
+
+.call-popap__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    width: 25px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    width: 25px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: $white;
+  }
+}
+
+.call-popap__open {
+  display: block;
+}

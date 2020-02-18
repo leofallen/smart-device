@@ -2,12 +2,18 @@
   overflow: hidden;
 }
 
+.page-footer__list-link {
+  color: $footer-font-grey;
+}
+
 .page-footer__list--hidden {
   display: none;
 }
 
 .page-footer__button {
   display: none;
+  background-color: transparent;
+  border: none;
 }
 
 .page-footer__wrapper {
@@ -224,7 +230,6 @@
   .page-footer__adres {
     padding-top: 26px;
     padding-right: 40px;
-
   }
 
   .page-footer__sections ul {
@@ -322,7 +327,6 @@
     display: block;
     width: 25px;
     height: 25px;
-
   }
 }
 
