@@ -1,39 +1,38 @@
-const sectionsTitle = document.querySelector(`.footer-title-sections`);
-const adresTitle = document.querySelector(`.footer-title-adres`);
-const adres = document.querySelectorAll(`.footer-adres`);
-const sections = document.querySelectorAll(`.footer-sections`);
-const accordionSection = sectionsTitle.querySelector(`.accordion`);
-const accordionAdres = adresTitle.querySelector(`.accordion`);
-const tabletWidth = 768;
+"use strict";
 
-// window.onresize = (evt) => {
-//   if (evt.target.innerWidth < tabletWidth) {
-//     [sectionsTitle, adresTitle].forEach(title => {
-//       title.addEventListener(`click`, () => {
-//         accordion(title)
-//       });
-//     });
-//   }
-// };
+var sectionsButton = document.querySelector(".page-footer__sections").querySelector(".page-footer__button");
+var adresButton = document.querySelector(".page-footer__adres").querySelector(".page-footer__button");
+var adres = document.querySelector(".page-footer__adres").querySelector("ul");
+var sections = document.querySelector(".page-footer__sections").querySelector("ul");
+var accordionSection = sectionsButton.querySelector(".accordion");
+var accordionAdres = adresButton.querySelector(".accordion");
+var tabletWidth = 768;
 
-const accordion = (target) => {
-  if (target.classList.contains(`footer-title-sections`)) {
-    for (el of sections) {
-      el.classList.toggle(`hidden`)
-    }
-    accordionSection.classList.toggle(`accordion-close`);
-  } else {
-    for (el of adres) {
-      el.classList.toggle(`hidden`)
-    }
-    accordionAdres.classList.toggle(`accordion-close`);
+var accordion = function accordion(target) {
+  if (target == sectionsButton) {
+    sections.classList.toggle("hidden");
+    sectionsButton.classList.toggle("page-footer__button--close");
+    sectionsButton.classList.toggle("page-footer__button--open");
+  } else if (target == adresButton) {
+    adres.classList.toggle("hidden");
+    adresButton.classList.toggle("page-footer__button--close");
+    adresButton.classList.toggle("page-footer__button--open");
   }
 };
 
-[sectionsTitle, adresTitle].forEach(title => {
-  title.addEventListener(`click`, () => {
-    accordion(title)
+var accordionListener = function accordionListener(arr) {
+  arr.forEach(function (title) {
+    title.addEventListener("click", function () {
+      accordion(title);
+    });
   });
-});
+};
 
+accordionListener([sectionsButton, adresButton]);
 
+window.onresize = function (evt) {
+  if (evt.target.innerWidth > tabletWidth) {
+    adres.classList.remove("hidden");
+    sections.classList.remove("hidden");
+  }
+};

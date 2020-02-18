@@ -1,0 +1,91 @@
+.feedback {
+  background-color: $blue;
+}
+
+.feedback__wrapper {
+  display: flex;
+
+  padding: 92px 193px;
+}
+
+.feedback__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 100px;
+}
+
+.feedback__form-wrapper form {
+  max-width: 570px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feedback__form-wrapper form input {
+  min-width: 270px;
+  min-height: 50px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $light-blue;
+
+  border: none;
+
+  &:hover {
+    box-shadow: 0 2px 5px 2px $main-font-grey;
+  }
+}
+
+.feedback__form-wrapper form textarea {
+  width: 100%;
+  flex-grow: 1;
+
+  background-color: $light-blue;
+  border: none;
+}
+
+.feedback__form-title {
+  font-family: ("Roboto Condensed");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+}
+
+.feedback__form-caption {
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+}
+
+.feedback__form-wrapper form button {
+  width: 270px;
+  height: 45px;
+  font-family: ("Roboto Condensed");
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 3px;
+}
+
+.feedback__wrapper form input[type="checkbox"] {
+
+}

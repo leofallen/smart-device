@@ -171,126 +171,95 @@
       </section>
     </div>
 
-    <!-- <section class="feedback">
-      <picture>
-        <source type="image/webp" srcset="./img/airplane-desktop@1x.webp, ./img/airplane-desktop@2x.webp 2x">
-        <source srcset="./img/airplane-desktop@1x.png, ./img/airplane-desktop@2x.png 2x">
-          1х: 668px; 2x: 1338px
-        <img src="./img/airplane-desktop@1x.png" width="668" height="493" alt="airplane">
-      </picture>
-      <h2>Остались вопросы? Задайте их нам!</h2>
-      <span>Мы проконсультируем Вас бесплатно</span>
-      <form action="#">
-        <input type="text">
-        <input type="text">
-        <textarea name="user-quest" id="user-quest" cols="30" rows="10"></textarea>
-        <button type="submit">ЗАДАТЬ ВОПРОС</button>
-        <input class="visually-hidden" type="checkbox" id="confirm">
-        <label for="#confirm">Я согласен на обработку  персональных данных</label>
-      </form>
-    </section> -->
+    <section class="feedback">
+      <div class="feedback__wrapper">
+        <picture>
+          <source type="image/webp" srcset="./img/airplane-desktop@1x.webp, ./img/airplane-desktop@2x.webp 2x">
+          <source srcset="./img/airplane-desktop@1x.png, ./img/airplane-desktop@2x.png 2x">
+            <!-- 1х: 668px; 2x: 1338px -->
+          <img class="feedback__image" src="./img/airplane-desktop@1x.png" width="668" height="493" alt="airplane">
+        </picture>
+        <div class="feedback__form-wrapper">
+          <h2 class="feedback__form-title">Остались вопросы? Задайте их нам!</h2>
+          <span class="feedback__form-caption">Мы проконсультируем Вас бесплатно</span>
+          <form action="#">
+            <input type="text">
+            <input type="text">
+            <textarea name="user-quest" id="user-quest" cols="30" rows="10"></textarea>
+            <button type="submit">ЗАДАТЬ ВОПРОС</button>
+            <input class="visually-hidden" type="checkbox" id="confirm">
+            <label for="#confirm">Я согласен на обработку  персональных данных</label>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer-content-wrapper desktop-wrapper-mixin">
-
-      <ul class="page-footer__social page-footer__list">
-        <li class="page-footer__logo page-footer__social-item  page-footer__list-item">
-              <svg class="page-footer__logo-icon" width="52" height="52">
-                <use xlink:href="#icon-mind"></use>
-              </svg>
-            <h2 class="page-footer__logo-title">Service Device</h2>
-            <span class="page-footer__logo-caption">умные технологии</span>
+  <footer class="page-footer desktop-wrapper-mixin">
+    <div class="page-footer__wrapper">
+      <ul class="page-footer__list">
+        <li class="page-footer__list-item page-footer__logo">
+          <span class="page-footer__logo-icon-wrapper">
+            <svg class="page-footer__logo-icon" width="52" height="52">
+              <use xlink:href="#icon-mind"></use>
+            </svg>
+          </span>
+          <h2 class="page-footer__logo-title">Service Device</h2>
+          <span class="page-footer__logo-caption">умные технологии</span>
         </li>
-        <li class="page-footer__social-item page-footer__social-date page-footer__list-item">
-          1999-2018 SD SERVICE DEVICES
-        </li>
-        <li class="page-footer__social-icons page-footer__social-item page-footer__list-item">
-          <a class="page-footer__social-link page-footer__link" href="#">
+        <li class="page-footer__list-item">1999-2018 SD SERVICE DEVICES</li>
+        <li class="page-footer__list-item page-footer__social">
+          <a class="page-footer__social-link" href="#">
             Фейсбук
-            <svg class="page-footer__icon" width="27" height="27">
+            <svg class="page-footer__social-icon" width="27" height="27">
               <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
-          <a class="page-footer__social-link page-footer__link" href="#">
+          <a class="page-footer__social-link" href="#">
             Однокласники
-            <svg class="page-footer__icon" width="27" height="27">
+            <svg class="page-footer__social-icon" width="27" height="27">
               <use xlink:href="#icon-ok"></use>
             </svg>
           </a>
-          <a class="page-footer__social-link page-footer__link" href="#">
+          <a class="page-footer__social-link" href="#">
             В контакте
-            <svg class="page-footer__icon" width="27" height="27">
+            <svg class="page-footer__social-icon" width="27" height="27">
               <use xlink:href="#icon-vk"></use>
             </svg>
           </a>
         </li>
       </ul>
-
-      <div class="page-footer-sections-wrapper">
-        <h2 class="page-footer--title footer-title-sections">
-          РАЗДЕЛЫ САЙТА
-          <span class="accordion sections-accordion-icon accordion-open"></span>
-        </h2>
-
-        <ul class="page-footer__sections page-footer__list footer-sections">
-          <li class="page-footer__sections-item page-footer__list-item">
-            <a class="page-footer__link" href="#">О компании</a>
-          </li>
-          <li class="page-footer__sections-item page-footer__list-item">
-            <a class="page-footer__link" href="#">Продукты</a>
-          </li>
-          <li class="page-footer__sections-item page-footer__list-item">
-            <a class="page-footer__link" href="#">Производство печатных плат</a>
-          </li>
-          <li class="page-footer__sections-item page-footer__list-item">
-            <a class="page-footer__link" href="#">Монтаж печатных плат</a>
-          </li>
+      <div class="page-footer__sections">
+        <h2 class="page-footer__title">РАЗДЕЛЫ САЙТА</h2>
+        <div class="page-footer__button page-footer__button--open"></div>
+        <ul class="page-footer__list">
+          <li class="page-footer__list-item">О компании</li>
+          <li class="page-footer__list-item">Продукты</li>
+          <li class="page-footer__list-item">Производство печатных плат</li>
+          <li class="page-footer__list-item">Монтаж печатных плат</li>
+          <li class="page-footer__list-item">Комплектующие</li>
+          <li class="page-footer__list-item">Доставка</li>
+          <li class="page-footer__list-item">Контакты</li>
         </ul>
-
-        <ul class="page-footer__service page-footer__list footer-sections">
-          <li class="page-footer__list-item">
-            <a class="page-footer__service-link page-footer__link" href="#">Комплектующие</a>
-          </li>
-          <li class="page-footer__list-item">
-            <a class="page-footer__service-link page-footer__link" href="#">Доставка</a>
-          </li>
-          <li class="page-footer__list-item">
-            <a class="page-footer__service-link page-footer__link" href="#">Контакты</a>
-          </li>
+      </div class="page-footer__sections">
+      <div class="page-footer__adres">
+        <h2 class="page-footer__title">НАШ ОФИС</h2>
+        <div class="page-footer__button page-footer__button--open"></div>
+        <ul class="page-footer__list">
+          <li class="page-footer__list-item">г. Мытищи, Олимпийский проспект, д.10</li>
+          <li class="page-footer__list-item">+7 (495) 589-40-50</li>
+          <li class="page-footer__list-item">+7 (925) 003-87-67</li>
+          <li class="page-footer__list-item">+7 (926) 926-080-79</li>
         </ul>
       </div>
-
-      <div class="page-footer-adres-wrapper">
-        <h2 class="page-footer--title footer-title-adres">
-          НАШ ОФИС
-          <span class="accordion adres-accordion-icon"></span>
-        </h2>
-        <ul class="page-footer__adres page-footer__list footer-adres">
-          <li class="page-footer__list-item">
-            <a class="page-footer__link" >г. Мытищи, Олимпийский проспект, д.10</a>
-          </li>
-          <li class="page-footer__list-item">
-            <a class="page-footer__adres-link page-footer__link" href="tel:84955894050">+7 (495) 589-40-50</a>
-          </li>
-          <li class="page-footer__list-item">
-            <a class="page-footer__adres-link page-footer__link" href="tel:89250038767">+7 (925) 003-87-67</a>
-          </li>
-          <li class="page-footer__list-item">
-            <a class="page-footer__adres-link page-footer__link" href="tel:892692608079">+7 (926) 926-080-79</a>
-          </li>
-        </ul>
-      </div>
-
-      <ul class="page-footer__copyright page-footer__list">
-        <li class="page-footer__copyright-item page-footer__list-item page-footer__copyright--rights">ВСЕ ПРАВА ЗАЩИЩЕНЫ</li>
-        <li class="page-footer__copyright-item page-footer__list-item page-footer__copyright--date">1999-2018 SD SERVICE DEVICES</li>
-        <li class="page-footer__copyright-item page-footer__list-item">УСЛОВИЯ КОНФИДЕЦНИАЛЬНОСТИ</li>
-        <li class="page-footer__copyright-item page-footer__list-item page-footer__copyright--dev">DEVELOPED BY WOW STUDIO</li>
+      <ul class="page-footer__list page-footer__copyright">
+        <li class="page-footer__list-item">ВСЕ ПРАВА ЗАЩИЩЕНЫ</li>
+        <li class="page-footer__list-item">1999-2018 SD SERVICE DEVICES</li>
+        <li class="page-footer__list-item">УСЛОВИЯ КОНФИДЕЦНИАЛЬНОСТИ</li>
+        <li class="page-footer__list-item">DEVELOPED BY WOW STUDIO</li>
       </ul>
     </div>
-
   </footer>
 
   <script src="./js/main.js"></script>
