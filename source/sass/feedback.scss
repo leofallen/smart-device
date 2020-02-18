@@ -2,6 +2,11 @@
   background-color: $blue;
 }
 
+// .feedback__image {
+//   width: 100%;
+//   height: auto;
+// }
+
 .feedback__wrapper {
   display: flex;
 
@@ -11,10 +16,9 @@
 .feedback__form-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 100px;
+  padding-left: 114px;
+  padding-right: calc(10% - 30px);
 }
 
 .feedback__form-wrapper form {
@@ -25,7 +29,7 @@
   justify-content: space-between;
 }
 
-.feedback__form-wrapper form input {
+.feedback__form-wrapper form input[type="text"] {
   min-width: 270px;
   min-height: 50px;
   margin-bottom: 40px;
@@ -47,12 +51,17 @@
 .feedback__form-wrapper form textarea {
   width: 100%;
   flex-grow: 1;
+  margin-bottom: 43px;
+  padding: 18px;
 
   background-color: $light-blue;
   border: none;
 }
 
 .feedback__form-title {
+  margin-top: 0;
+  margin-bottom: 9px;
+
   font-family: ("Roboto Condensed");
   font-style: normal;
   font-weight: normal;
@@ -62,6 +71,8 @@
 }
 
 .feedback__form-caption {
+  margin-bottom: 52px;
+
   font-family: ("PT Mono");
   font-style: normal;
   font-weight: normal;
@@ -86,6 +97,53 @@
   border-radius: 3px;
 }
 
-.feedback__wrapper form input[type="checkbox"] {
-
+.feedback__form-confirm {
+  flex-basis: 50%;
 }
+
+.feedback__form-confirm-title {
+  display: inline-block;
+  width: 196px;
+}
+
+.feedback__form-confirm label {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+
+  font-family: ("PT Mono");
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
+
+.feedback__form-confirm input:checked + label::after {
+  opacity: 1;
+}
+
