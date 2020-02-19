@@ -4,9 +4,7 @@ var sectionsButton = document.querySelector(".page-footer__sections").querySelec
 var adresButton = document.querySelector(".page-footer__adres").querySelector(".page-footer__button");
 var adres = document.querySelector(".page-footer__adres").querySelector("ul");
 var sections = document.querySelector(".page-footer__sections").querySelector("ul");
-var accordionSection = sectionsButton.querySelector(".accordion");
-var accordionAdres = adresButton.querySelector(".accordion");
-var tabletWidth = 768;
+var TABLET_WIDTH = 768;
 var scrollDown = document.querySelector(".promo__scroll-down");
 var scrolСonsultation = document.querySelector(".promo__button");
 var feedbackBlock = document.querySelector("#feedback");
@@ -19,6 +17,20 @@ var popapSubmitButton = callPopap.querySelector("button[type=submit]");
 var popapInputName = callPopap.querySelector("input[name=name]");
 var popapInputTel = callPopap.querySelector("input[name=tel]");
 var popapInputQuest = callPopap.querySelector("textarea");
+var feedbackInputTel = document.querySelector(".feedback__form-wrapper").querySelector("input[name=tel]");
+var inputs = [popapInputTel, feedbackInputTel];
+inputs.forEach(function (input) {
+  input.addEventListener("focusin", function () {
+    input.value = "+7(";
+  });
+  input.addEventListener("input", function () {
+    var arr = input.value.split('');
+
+    if (arr.length === 6) {
+      input.value += ")";
+    }
+  });
+});
 
 var localStorageCheck = function localStorageCheck() {
   if (localStorage.getItem('name') !== null) {
@@ -155,7 +167,7 @@ if (popapCloseButton) {
 }
 
 window.onresize = function (evt) {
-  if (evt.target.innerWidth > tabletWidth) {
+  if (evt.target.innerWidth > TABLET_WIDTH) {
     adres.classList.remove("page-footer__list--hidden");
     sections.classList.remove("page-footer__list--hidden");
   }

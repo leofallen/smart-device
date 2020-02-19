@@ -4,9 +4,7 @@ const adresButton = document.querySelector(`.page-footer__adres`)
 .querySelector(`.page-footer__button`);
 const adres = document.querySelector(`.page-footer__adres`).querySelector(`ul`);
 const sections = document.querySelector(`.page-footer__sections`).querySelector(`ul`);
-const accordionSection = sectionsButton.querySelector(`.accordion`);
-const accordionAdres = adresButton.querySelector(`.accordion`);
-const tabletWidth = 768;
+const TABLET_WIDTH = 768;
 const scrollDown = document.querySelector(`.promo__scroll-down`);
 const scrolСonsultation = document.querySelector(`.promo__button`);
 const feedbackBlock = document.querySelector(`#feedback`);
@@ -19,6 +17,23 @@ const popapSubmitButton = callPopap.querySelector(`button[type=submit]`);
 const popapInputName = callPopap.querySelector(`input[name=name]`);
 const popapInputTel = callPopap.querySelector(`input[name=tel]`);
 const popapInputQuest = callPopap.querySelector(`textarea`);
+const feedbackInputTel = document.querySelector(`.feedback__form-wrapper`)
+.querySelector(`input[name=tel]`);
+
+const inputs = [popapInputTel, feedbackInputTel];
+
+inputs.forEach( input => {
+  input.addEventListener(`focusin`, () => {
+    input.value = `+7(`;
+  });
+
+  input.addEventListener(`input`, () => {
+    let arr = input.value.split('');
+    if (arr.length === 6) {
+      input.value += ")";
+    }
+  })
+});
 
 const localStorageCheck = () => {
   if (localStorage.getItem('name') !== null) {
@@ -30,7 +45,7 @@ const localStorageCheck = () => {
   if (localStorage.getItem('quest') !== null) {
     popapInputQuest.value = localStorage.getItem('quest');
   }
-}
+};
 
 const KEYS = {
   ESC: 27,
@@ -156,7 +171,7 @@ if (popapCloseButton) {
 }
 
 window.onresize = (evt) => {
-  if (evt.target.innerWidth > tabletWidth) {
+  if (evt.target.innerWidth > TABLET_WIDTH) {
     adres.classList.remove(`page-footer__list--hidden`);
     sections.classList.remove(`page-footer__list--hidden`);
   }
