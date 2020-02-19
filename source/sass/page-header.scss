@@ -12,11 +12,11 @@
 
   overflow: hidden;
   background-color: $dark-blue;
-  background-image: url('../img/header-bg-desktop@1x.jpg');
+  background-image: url("../img/header-bg-desktop@1x.jpg");
   background-position: center 0;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url('../img/header-bg-desktop@2x.jpg');
+    background-image: url("../img/header-bg-desktop@2x.jpg");
     background-size: 1920px auto;
     background-position: center 0;
   }
@@ -42,18 +42,21 @@
 }
 
 .page-header__logo-title {
+  max-width: 200px;
   margin: 0;
 
-  font-family: "Roboto Condensed";
+  font-family: ("Roboto Condensed");
   font-weight: bold;
   font-size: 25px;
   line-height: 29px;
-  white-space: nowrap;
   color: $white;
 }
 
 .page-header__logo-caption {
-  font-family: "Roboto";
+  display: block;
+  max-width: 200px;
+
+  font-family: ("Roboto");
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -63,18 +66,23 @@
 
 .page-header__contacts {
   display: flex;
-  align-items: center;
 }
 
 .page-header__contacts-link {
   display: flex;
+  max-width: 207px;
   margin-left: 88px;
+}
+
+.page-header__contacts-link--mail,
+.page-header__contacts-link--tel {
+  padding-top: 5px;
 }
 
 .page-header__contacts-info {
   margin-left: 16px;
 
-  font-family: "PT Mono";
+  font-family: ("PT Mono");
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -83,11 +91,12 @@
 
 .page-header__contacts-call {
   display: block;
+  height: 45px;
 
   margin-left: 49px;
   padding: 14px 27px;
 
-  font-family: "Roboto Condensed";
+  font-family: ("Roboto Condensed");
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -112,11 +121,11 @@
     min-height: 684px;
 
     padding: 19px 23px;
-    background-image: url('../img/header-bg-tablet@1x.jpg');
+    background-image: url("../img/header-bg-tablet@1x.jpg");
     background-position: center 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url('../img/header-bg-tablet@2x.jpg');
+      background-image: url("../img/header-bg-tablet@2x.jpg");
       background-size: 1515px auto;
       background-position: center 0;
     }
@@ -158,11 +167,11 @@
     margin-right: auto;
     padding: 20px 15px;
 
-    background-image: url('../img/header-bg-mobile@1x.jpg');
+    background-image: url("../img/header-bg-mobile@1x.jpg");
     background-position: 55% -15px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url('../img/header-bg-mobile@2x.jpg');
+      background-image: url("../img/header-bg-mobile@2x.jpg");
       background-size: 1447px auto;
     }
   }

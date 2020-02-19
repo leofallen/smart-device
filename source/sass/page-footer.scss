@@ -42,6 +42,8 @@
 }
 
 .page-footer__title {
+  max-width: 250px;
+
   margin-bottom: 24px;
 
   font-family: ("Roboto Condensed");
@@ -111,7 +113,9 @@
 .page-footer__social {
   display: flex;
   justify-content: space-between;
-  width: 110px;
+  flex-wrap: wrap;
+  margin-left: -14px;
+  width: 125px;
 }
 
 .page-footer__social-icons {
@@ -121,6 +125,7 @@
 }
 
 .page-footer__social-link {
+  margin-left: 14px;
   font-size: 0;
 
   color: $footer-font-grey;
@@ -129,6 +134,7 @@
     opacity: 0.5;
   }
 }
+
 
 .page-footer__copyright {
   position: relative;
@@ -229,7 +235,7 @@
 
   .page-footer__adres {
     padding-top: 26px;
-    padding-right: 40px;
+    padding-right: 10px;
   }
 
   .page-footer__sections ul {

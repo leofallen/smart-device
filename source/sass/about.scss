@@ -63,6 +63,10 @@
 
   border: 1px solid $blue;
   border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 0 3px 3px $blue;
+  }
 }
 
 .about__description-overflow {
