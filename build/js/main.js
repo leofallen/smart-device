@@ -95,6 +95,7 @@ if (scrollDown) {
 
 var popapClose = function popapClose() {
   callPopap.classList.remove("call-popap__open");
+  document.querySelector("body").classList.remove("body-block-mixin");
 };
 
 var onEscPress = function onEscPress(evt) {
@@ -116,7 +117,7 @@ var inputFocusCheck = function inputFocusCheck() {
 };
 
 var popapOpen = function popapOpen(evt) {
-  document.querySelector("body").style.overflow = "hidden";
+  document.querySelector("body").classList.add("body-block-mixin");
   inputFocusCheck();
   localStorageCheck();
   evt.preventDefault();

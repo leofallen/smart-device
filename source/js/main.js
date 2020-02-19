@@ -101,6 +101,7 @@ if (scrollDown) {
 
 const popapClose = () => {
   callPopap.classList.remove(`call-popap__open`);
+  document.querySelector(`body`).classList.remove(`body-block-mixin`);
 }
 
 const onEscPress = (evt) => {
@@ -122,8 +123,7 @@ const inputFocusCheck = () => {
 };
 
 const popapOpen = (evt) => {
-  document.querySelector(`body`).style.overflow = "hidden";
-
+  document.querySelector(`body`).classList.add(`body-block-mixin`);
 
   inputFocusCheck();
   localStorageCheck();
