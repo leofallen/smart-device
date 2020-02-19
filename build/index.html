@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Стартовый шаблон</title>
+  <title>Smart Device</title>
   <link rel="preload" href="./fonts/PTMono-Regular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff" as="font" crossorigin="anonymous">
@@ -172,11 +172,11 @@
         Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__description-overflow">..</span><span class="about__description-overflow-hidden"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
       </p>
       <a class="about__more" href="#">ПОДРОБНЕЕ</a>
-      <img class="about__triangle about__triangle--1" src="./img/triangle.svg" width="300" height="300">
-      <img class="about__triangle about__triangle--2" src="./img/triangle.svg" width="300" height="300">
-      <img class="about__triangle about__triangle--3" src="./img/triangle.svg" width="300" height="300">
-      <img class="about__triangle about__triangle--4" src="./img/triangle.svg" width="300" height="300">
-      <img class="about__triangle about__triangle--5" src="./img/triangle.svg" width="300" height="300">
+      <img class="about__triangle about__triangle--1" src="./img/triangle.svg" width="300" height="300" alt=".">
+      <img class="about__triangle about__triangle--2" src="./img/triangle.svg" width="300" height="300" alt=".">
+      <img class="about__triangle about__triangle--3" src="./img/triangle.svg" width="300" height="300" alt=".">
+      <img class="about__triangle about__triangle--4" src="./img/triangle.svg" width="300" height="300" alt=".">
+      <img class="about__triangle about__triangle--5" src="./img/triangle.svg" width="300" height="300" alt=".">
     </section>
 
     <div class="service-content-wrapper desktop-wrapper-mixin">
@@ -184,7 +184,7 @@
         <h2 class="service__title">Service Device предлагает следующие товары и услуги</h2>
         <a class="service__item" href="#">
           <article>
-            <span class="service__item-title">Производство печатных плат</span>
+            <h3 class="service__item-title">Производство печатных плат</h3>
               <picture>
                 <source type="image/webp" media="(min-width: 1230px)" srcset="./img/service-microplate-desktop@1x.webp, ./img/service-microplate-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/service-microplate-tablet@1x.webp, ./img/service-microplate-tablet@2x.webp 2x">
@@ -192,13 +192,14 @@
                 <source media="(min-width: 1230px)" srcset="./img/service-microplate-desktop@1x.jpg, ./img/service-microplate-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="./img/service-microplate-tablet@1x.jpg, ./img/service-microplate-tablet@2x.jpg 2x">
                 <source media="(min-width: 320px)" srcset="./img/service-microplate-mobile@1x.jpg, ./img/service-microplate-mobile@2x.jpg 2x">
+                 <!-- 1x  370px: 2x 740px: -->
                 <img class="service__image" src="./img/service-microplate-desktop@1x.jpg" alt="microplate">
               </picture>
           </article>
         </a>
         <a class="service__item" href="#">
           <article>
-            <span class="service__item-title">Монтаж печатных плат</span>
+            <h3 class="service__item-title">Монтаж печатных плат</h3>
             <picture>
               <source type="image/webp" media="(min-width: 1230px)" srcset="./img/service-mounting-desktop@1x.webp, ./img/service-mounting-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="./img/service-mounting-tablet@1x.webp, ./img/service-mounting-tablet@2x.webp 2x">
@@ -206,13 +207,14 @@
               <source media="(min-width: 1230px)" srcset="./img/service-mounting-desktop@1x.jpg, ./img/service-mounting-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="./img/service-mounting-tablet@1x.jpg, ./img/service-mounting-tablet@2x.jpg 2x">
               <source media="(min-width: 320px)" srcset="./img/service-mounting-mobile@1x.jpg, ./img/service-mounting-mobile@2x.jpg 2x">
+              <!-- 1x  370px: 2x 740px: -->
               <img class="service__image" src="./img/service-mounting-desktop@1x.jpg" alt="mountain">
             </picture>
           </article>
         </a>
         <a class="service__item" href="#">
           <article>
-            <span class="service__item-title">Комплектующие для светотехники</span>
+            <h3 class="service__item-title">Комплектующие для светотехники</h3>
             <picture>
               <source type="image/webp" media="(min-width: 1230px)" srcset="./img/service-diode-desktop@1x.webp, ./img/service-diode-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="./img/service-diode-tablet@1x.webp, ./img/service-diode-tablet@2x.webp 2x">
@@ -220,6 +222,7 @@
               <source media="(min-width: 1230px)" srcset="./img/service-diode-desktop@1x.jpg, ./img/service-diode-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="./img/service-diode-tablet@1x.jpg, ./img/service-diode-tablet@2x.jpg 2x">
               <source media="(min-width: 320px)" srcset="./img/service-diode-mobile@1x.jpg, ./img/service-diode-mobile@2x.jpg 2x">
+              <!-- 1x  370px: 2x 740px: -->
               <img class="service__image" src="./img/service-diode-desktop@1x.jpg" alt="diode">
             </picture>
           </article>
@@ -232,7 +235,7 @@
         <picture>
           <source type="image/webp" srcset="./img/airplane-desktop@1x.webp, ./img/airplane-desktop@2x.webp 2x">
           <source srcset="./img/airplane-desktop@1x.png, ./img/airplane-desktop@2x.png 2x">
-
+           <!-- 1x  668px: 2x 1338px: -->
           <img class="feedback__image" src="./img/airplane-desktop@1x.png" width="668" height="493" alt="airplane">
         </picture>
         <div class="feedback__form-wrapper">
@@ -240,8 +243,8 @@
           <span class="feedback__form-caption">Мы проконсультируем Вас бесплатно</span>
           <form action="#">
             <input type="text" placeholder="Имя" required="">
-            <input type="text" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{7}|8[0-9]{10})" name="tel" required="">
-            <textarea name="user-quest" id="user-quest" cols="30" rows="9" placeholder="Ваш вопрос" required=""></textarea>
+            <input type="text" placeholder="Телефон" id="feedback-tel" minlength="16" name="tel" required="">
+            <textarea name="user-quest" id="quest" cols="30" rows="9" placeholder="Ваш вопрос" required=""></textarea>
             <button type="submit">ЗАДАТЬ ВОПРОС</button>
             <div class="feedback__form-confirm">
               <input class="visually-hidden" type="checkbox" id="confirm" required="">
@@ -256,7 +259,7 @@
 
   </main>
 
-  <footer class="page-footer desktop-wrapper-mixin">
+  <footer class="page-footer footer-wrapper-mixin">
     <div class="page-footer__wrapper">
       <ul class="page-footer__list">
         <li class="page-footer__list-item page-footer__logo">
@@ -345,7 +348,7 @@
           <span class="call-popap__form-caption">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
           <form action="#">
             <input type="text" placeholder="Имя" name="name" autofocus="" required="">
-            <input type="text" placeholder="Телефон" name="tel" pattern="(\+7\([0-9]{3}\)[0-9]{7}|8[0-9]{10})" required="">
+            <input type="text" placeholder="Телефон" name="tel" minlength="16" required="">
             <textarea name="user-quest" id="user-quest" cols="30" rows="9" placeholder="Ваш вопрос"></textarea>
             <button type="submit">ЗАДАТЬ ВОПРОС</button>
             <div class="call-popap__form-confirm">
@@ -359,8 +362,9 @@
       </div>
     </div>
 
-    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <script src="./js/picturefill.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 </html>

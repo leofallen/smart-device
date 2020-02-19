@@ -4,7 +4,6 @@ var sectionsButton = document.querySelector(".page-footer__sections").querySelec
 var adresButton = document.querySelector(".page-footer__adres").querySelector(".page-footer__button");
 var adres = document.querySelector(".page-footer__adres").querySelector("ul");
 var sections = document.querySelector(".page-footer__sections").querySelector("ul");
-var TABLET_WIDTH = 768;
 var scrollDown = document.querySelector(".promo__scroll-down");
 var scrolСonsultation = document.querySelector(".promo__button");
 var feedbackBlock = document.querySelector("#feedback");
@@ -18,19 +17,11 @@ var popapInputName = callPopap.querySelector("input[name=name]");
 var popapInputTel = callPopap.querySelector("input[name=tel]");
 var popapInputQuest = callPopap.querySelector("textarea");
 var feedbackInputTel = document.querySelector(".feedback__form-wrapper").querySelector("input[name=tel]");
-var inputs = [popapInputTel, feedbackInputTel];
-inputs.forEach(function (input) {
-  input.addEventListener("focusin", function () {
-    input.value = "+7(";
-  });
-  input.addEventListener("input", function () {
-    var arr = input.value.split('');
-
-    if (arr.length === 6) {
-      input.value += ")";
-    }
-  });
-});
+var TABLET_WIDTH = 768;
+var KEYS = {
+  ESC: 27,
+  ENTER: 13
+};
 
 var localStorageCheck = function localStorageCheck() {
   if (localStorage.getItem('name') !== null) {
@@ -44,11 +35,6 @@ var localStorageCheck = function localStorageCheck() {
   if (localStorage.getItem('quest') !== null) {
     popapInputQuest.value = localStorage.getItem('quest');
   }
-};
-
-var KEYS = {
-  ESC: 27,
-  ENTER: 13
 };
 
 var accordion = function accordion(target) {
@@ -130,6 +116,7 @@ var inputFocusCheck = function inputFocusCheck() {
 };
 
 var popapOpen = function popapOpen(evt) {
+  document.querySelector("body").style.overflow = "hidden";
   inputFocusCheck();
   localStorageCheck();
   evt.preventDefault();
@@ -172,3 +159,11 @@ window.onresize = function (evt) {
     sections.classList.remove("page-footer__list--hidden");
   }
 };
+
+if (IMask) {
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  var mask1 = IMask(feedbackInputTel, maskOptions);
+  var mask2 = IMask(popapInputTel, maskOptions);
+}

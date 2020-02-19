@@ -16,7 +16,7 @@ const del = require("del");
 const babel = require("gulp-babel");
 
 gulp.task("js", function () {
-  return gulp.src('source/js/main.js')
+  return gulp.src('source/js/*.js')
   .pipe(babel({
       presets: ['@babel/env']
   }))

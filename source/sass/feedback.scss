@@ -59,9 +59,13 @@
 
 .feedback__form-wrapper form textarea {
   width: 100%;
+  max-height: 154px;
   flex-grow: 1;
   margin-bottom: 43px;
   padding: 18px;
+
+  font-size: 16px;
+  line-height: 22px;
 
   background-color: $light-blue;
   border: none;
@@ -117,9 +121,8 @@
 }
 
 .feedback__form-confirm {
-  flex-basis: 50%;
   padding-top: 8px;
-  padding-left: 23px;
+  padding-right: 35px;
 }
 
 .feedback__form-confirm-title {
@@ -168,6 +171,10 @@
   opacity: 1;
 }
 
+.feedback__form-confirm input:focus + label::before {
+  box-shadow: 0 0 2px 2px #496fd6;
+}
+
 @media (max-width: 1305px) {
   .feedback__image {
     display: none;
@@ -205,6 +212,10 @@
 }
 
 @media (max-width: $mobile-max-width) {
+  .feedback__form-confirm-title {
+    width: auto;
+  }
+
   .feedback__wrapper {
     padding: 29px 16px;
   }

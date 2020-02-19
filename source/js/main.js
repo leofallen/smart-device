@@ -4,7 +4,6 @@ const adresButton = document.querySelector(`.page-footer__adres`)
 .querySelector(`.page-footer__button`);
 const adres = document.querySelector(`.page-footer__adres`).querySelector(`ul`);
 const sections = document.querySelector(`.page-footer__sections`).querySelector(`ul`);
-const TABLET_WIDTH = 768;
 const scrollDown = document.querySelector(`.promo__scroll-down`);
 const scrolСonsultation = document.querySelector(`.promo__button`);
 const feedbackBlock = document.querySelector(`#feedback`);
@@ -20,20 +19,11 @@ const popapInputQuest = callPopap.querySelector(`textarea`);
 const feedbackInputTel = document.querySelector(`.feedback__form-wrapper`)
 .querySelector(`input[name=tel]`);
 
-const inputs = [popapInputTel, feedbackInputTel];
-
-inputs.forEach( input => {
-  input.addEventListener(`focusin`, () => {
-    input.value = `+7(`;
-  });
-
-  input.addEventListener(`input`, () => {
-    let arr = input.value.split('');
-    if (arr.length === 6) {
-      input.value += ")";
-    }
-  })
-});
+const TABLET_WIDTH = 768;
+const KEYS = {
+  ESC: 27,
+  ENTER: 13
+}
 
 const localStorageCheck = () => {
   if (localStorage.getItem('name') !== null) {
@@ -47,10 +37,6 @@ const localStorageCheck = () => {
   }
 };
 
-const KEYS = {
-  ESC: 27,
-  ENTER: 13
-}
 
 const accordion = (target) => {
   if (target == sectionsButton) {
@@ -136,6 +122,9 @@ const inputFocusCheck = () => {
 };
 
 const popapOpen = (evt) => {
+  document.querySelector(`body`).style.overflow = "hidden";
+
+
   inputFocusCheck();
   localStorageCheck();
   evt.preventDefault();
@@ -176,3 +165,11 @@ window.onresize = (evt) => {
     sections.classList.remove(`page-footer__list--hidden`);
   }
 };
+
+if (IMask) {
+  const maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  const mask1 = IMask(feedbackInputTel, maskOptions);
+  const mask2 = IMask(popapInputTel, maskOptions);
+}
