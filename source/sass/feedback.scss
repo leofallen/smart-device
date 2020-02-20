@@ -26,6 +26,11 @@
   justify-content: space-between;
 }
 
+.feedback__form-wrapper form input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .feedback__form-wrapper form input[type="text"] {
   min-width: 270px;
   min-height: 50px;
@@ -37,8 +42,8 @@
   font-size: 16px;
   line-height: 22px;
   background-color: $light-blue;
-
   color: $white;
+
   border: none;
 
   &:hover {
@@ -184,6 +189,7 @@
     padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 107px;
   }
 
   .feedback__form-wrapper {
@@ -203,6 +209,8 @@
   }
 
   .feedback__form-wrapper form textarea {
+    max-height: 165px;
+
     padding-bottom: 30px;
   }
 

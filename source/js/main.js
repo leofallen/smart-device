@@ -43,10 +43,29 @@ const accordion = (target) => {
       sections.classList.toggle(`page-footer__list--hidden`);
       sectionsButton.classList.toggle(`page-footer__button--close`);
       sectionsButton.classList.toggle(`page-footer__button--open`);
+      adres.classList.add(`page-footer__list--hidden`);
+      adresButton.classList.remove(`page-footer__button--open`);
+      adresButton.classList.add(`page-footer__button--close`);
   } else if (target == adresButton) {
       adres.classList.toggle(`page-footer__list--hidden`);
       adresButton.classList.toggle(`page-footer__button--close`);
       adresButton.classList.toggle(`page-footer__button--open`);
+      sections.classList.add(`page-footer__list--hidden`);
+      sectionsButton.classList.remove(`page-footer__button--open`);
+      sectionsButton.classList.add(`page-footer__button--close`);
+  }
+};
+
+
+window.onresize = (evt) => {
+  if (evt.target.innerWidth > TABLET_WIDTH) {
+    adres.classList.remove(`page-footer__list--hidden`);
+    sections.classList.remove(`page-footer__list--hidden`);
+  } else {
+    sections.classList.add(`page-footer__list--hidden`);
+    adres.classList.add(`page-footer__list--hidden`);
+    sectionsButton.classList.add(`page-footer__button--close`);
+    adresButton.classList.add(`page-footer__button--close`);
   }
 };
 
@@ -65,6 +84,7 @@ if (scrolСonsultation) {
     if (evt.keyCode === KEYS.ENTER) {
       evt.preventDefault();
       feedbackBlock.scrollIntoView({
+        block: "center",
         behavior: "smooth"
     });
    }
@@ -74,6 +94,7 @@ if (scrolСonsultation) {
   scrolСonsultation.addEventListener(`click`, (evt) => {
     evt.preventDefault();
     feedbackBlock.scrollIntoView({
+      block: "center",
       behavior: "smooth"
     });
   });
@@ -97,7 +118,6 @@ if (scrollDown) {
     });
   });
 }
-
 
 const popapClose = () => {
   callPopap.classList.remove(`call-popap__open`);
@@ -158,13 +178,6 @@ if (callBackButton) {
 if (popapCloseButton) {
   popapCloseButton.addEventListener(`click`, popapClose);
 }
-
-window.onresize = (evt) => {
-  if (evt.target.innerWidth > TABLET_WIDTH) {
-    adres.classList.remove(`page-footer__list--hidden`);
-    sections.classList.remove(`page-footer__list--hidden`);
-  }
-};
 
 if (IMask) {
   const maskOptions = {

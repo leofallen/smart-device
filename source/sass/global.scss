@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
   padding: 0;
 
-  font-family: "PT Mono", monospace, sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
 
   background-color: $white;
 }
@@ -28,6 +28,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+input, textarea, select {
+    -webkit-appearance: none;
 }
 
 @font-face {

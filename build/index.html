@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="smart device, печатные платы, светотехника, производство печатных плат, монтаж печатных плат">
   <title>Smart Device</title>
   <link rel="preload" href="./fonts/PTMono-Regular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
@@ -80,7 +81,7 @@
 
       <section class="page-header__contacts">
         <h2 class="visually-hidden">контакты</h2>
-        <a class="page-header__contacts-link page-header__contacts-link--mail link-mixin" href="mailto:info@sd.ru">
+        <a class="page-header__contacts-link page-header__contacts-link--mail link-mixin" aria-label="Написать нам на почту" href="mailto:info@sd.ru">
           <span class="page-header__contacts-icon-wrapper">
             <svg class="page-header__contacts-icon" width="18" height="18">
               <use xlink:href="#icon-mail"></use>
@@ -88,7 +89,7 @@
           </span>
           <span class="page-header__contacts-info">info@sd.ru</span>
         </a>
-        <a class="page-header__contacts-link page-header__contacts-link--tel link-mixin" href="tel:84950005252">
+        <a class="page-header__contacts-link page-header__contacts-link--tel link-mixin" aria-label="позвонить нам" href="tel:84950005252">
           <span class="page-header__contacts-icon-wrapper">
             <svg class="page-header__contacts-icon" width="18" height="18">
               <use xlink:href="#icon-tel"></use>
@@ -242,9 +243,9 @@
           <h2 class="feedback__form-title">Остались вопросы? Задайте их нам!</h2>
           <span class="feedback__form-caption">Мы проконсультируем Вас бесплатно</span>
           <form action="#">
-            <input type="text" placeholder="Имя" required="">
-            <input type="text" placeholder="Телефон" id="feedback-tel" minlength="16" name="tel" required="">
-            <textarea name="user-quest" id="quest" cols="30" rows="9" placeholder="Ваш вопрос" required=""></textarea>
+            <input type="text" placeholder="Имя" aria-label="имя" required="">
+            <input type="text" placeholder="Телефон" minlength="16" name="tel" aria-label="телефон" required="">
+            <textarea name="user-quest" cols="30" rows="9" placeholder="Ваш вопрос" aria-label="ваш вопрос" required=""></textarea>
             <button type="submit">ЗАДАТЬ ВОПРОС</button>
             <div class="feedback__form-confirm">
               <input class="visually-hidden" type="checkbox" id="confirm" required="">
@@ -295,7 +296,7 @@
       </ul>
       <div class="page-footer__sections">
         <h2 class="page-footer__title">РАЗДЕЛЫ САЙТА</h2>
-        <button class="page-footer__button page-footer__button--open"></button>
+        <button class="page-footer__button page-footer__button--close" aria-label="раскрыть меню - разделы сайта"></button>
         <ul class="page-footer__list">
           <li class="page-footer__list-item">
             <a class="page-footer__list-link" href="#">О компании</a>
@@ -322,12 +323,18 @@
       </div>
       <div class="page-footer__adres">
         <h2 class="page-footer__title">НАШ ОФИС</h2>
-        <button class="page-footer__button page-footer__button--open"></button>
+        <button class="page-footer__button" aria-label="раскрыть меню - наш офис"></button>
         <ul class="page-footer__list">
           <li class="page-footer__list-item">г. Мытищи, Олимпийский проспект, д.10</li>
-          <li class="page-footer__list-item">+7 (495) 589-40-50</li>
-          <li class="page-footer__list-item">+7 (925) 003-87-67</li>
-          <li class="page-footer__list-item">+7 (926) 926-080-79</li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="tel:84955894050">+7 (495) 589-40-50</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="tel:89250038767">+7 (925) 003-87-67</a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__list-link" href="tel:892692608079">+7 (926) 926-080-79</a>
+          </li>
         </ul>
       </div>
       <ul class="page-footer__list page-footer__copyright">
@@ -363,7 +370,7 @@
     </div>
 
     <script src="https://unpkg.com/imask"></script>
-    <script src="./js/picturefill.js"></script>
+    <script src="./js/vendor.js"></script>
     <script src="./js/main.js"></script>
 
 </body>

@@ -54,6 +54,7 @@
     "node": "10.15.3"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "jquery-mask-plugin": "^1.14.16"
   }
 }

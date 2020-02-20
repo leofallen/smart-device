@@ -72,6 +72,10 @@
   display: flex;
   max-width: 207px;
   margin-left: 88px;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .page-header__contacts-link--mail,
@@ -174,6 +178,11 @@
       background-image: url("../img/header-bg-mobile@2x.jpg");
       background-size: 1447px auto;
     }
+  }
+
+  .page-header__contacts-link--mail,
+  .page-header__contacts-link--tel {
+    padding-top: 0;
   }
 
   .page-header__logo-title,
