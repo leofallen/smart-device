@@ -63,6 +63,7 @@ gulp.task("images", function() {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
+      mozjpeg({quality: 85}),
       imagemin.svgo()
     ]))
 

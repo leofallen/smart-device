@@ -35,7 +35,7 @@
 .page-footer__list-item {
   max-width: 333px;
 
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -48,7 +48,7 @@
 
   margin-bottom: 24px;
 
-  font-family: ("Roboto Condensed");
+  font-family: ("Roboto Condensed", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -75,7 +75,7 @@
 .page-footer__logo-title {
   margin: 0;
 
-  font-family: ("Roboto Condensed");
+  font-family: ("Roboto Condensed", "Arial", sans-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -87,7 +87,7 @@
   display: block;
   margin-bottom: 58px;
 
-  font-family: ("Roboto");
+  font-family: ("Roboto", "Arial", sans-serif);
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -162,7 +162,7 @@
 .page-footer__copyright li {
   width: auto;
 
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 13px;

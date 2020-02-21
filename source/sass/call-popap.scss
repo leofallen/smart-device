@@ -33,7 +33,7 @@
   min-height: 50px;
   margin-bottom: 30px;
   padding: 14px 20px;
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -51,7 +51,7 @@
 .call-popap__form-wrapper form textarea::placeholder,
 .call-popap__form-wrapper form input[type="text"]::placeholder {
 
-  font-family: ("PT Mono;");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -79,7 +79,7 @@
   margin-top: 0;
   margin-bottom: 9px;
 
-  font-family: ("Roboto Condensed");
+  font-family: ("Roboto Condensed", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -90,7 +90,7 @@
 .call-popap__form-caption {
   margin-bottom: 35px;
 
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -103,7 +103,7 @@
   height: 45px;
   margin-bottom: 30px;
 
-  font-family: ("Roboto Condensed");
+  font-family: ("Roboto Condensed", "Arial", sans-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -134,7 +134,7 @@
   position: relative;
   padding-left: 32px;
 
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

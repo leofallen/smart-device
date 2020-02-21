@@ -36,7 +36,7 @@
   min-height: 50px;
   margin-bottom: 40px;
   padding: 14px 20px;
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -54,7 +54,7 @@
 .feedback__form-wrapper form textarea::placeholder,
 .feedback__form-wrapper form input[type="text"]::placeholder {
 
-  font-family: ("PT Mono;");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -86,7 +86,7 @@
   margin-top: 0;
   margin-bottom: 9px;
 
-  font-family: ("Roboto Condensed");
+  font-family: ("Roboto Condensed", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -97,7 +97,7 @@
 .feedback__form-caption {
   margin-bottom: 52px;
 
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -108,7 +108,7 @@
 .feedback__form-wrapper form button {
   width: 270px;
   height: 45px;
-  font-family: ("Roboto Condensed");
+  font-family: ("Roboto Condensed", "Arial", sans-serif);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -140,7 +140,7 @@
   position: relative;
   padding-left: 32px;
 
-  font-family: ("PT Mono");
+  font-family: ("PT Mono", "Arial", sans-serif);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
