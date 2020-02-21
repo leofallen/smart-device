@@ -32,6 +32,11 @@ a {
 
 input, textarea, select {
     -webkit-appearance: none;
+    outline: none;
+}
+
+button {
+  outline: none;
 }
 
 @font-face {

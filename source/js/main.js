@@ -186,3 +186,5 @@ if (IMask) {
   const mask1 = IMask(feedbackInputTel, maskOptions);
   const mask2 = IMask(popapInputTel, maskOptions);
 }
+
+smoothscroll.polyfill();
