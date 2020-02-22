@@ -6,10 +6,9 @@
   <meta name="Description" content="производство печатных плат">
   <meta name="keywords" content="smart device, печатные платы, светотехника, производство печатных плат, монтаж печатных плат">
   <title>Smart Device</title>
-  <link rel="preload" href="./fonts/PTMono-Regular.woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="preload" href="./img/header-bg-desktop@1x.jpg" as="image">
+  <link rel="preload" href="./img/microplate-desktop@1x.webp" as="image">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
@@ -101,7 +100,7 @@
       <source media="(min-width: 768px)" srcset="./img/microplate-tablet@1x.png, ./img/microplate-tablet@2x.png 2x">
       <source srcset="./img/microplate-mobile@1x.png, ./img/microplate-mobile@2x.png 2x">
       <!-- 1х: 705px; 2x: 1410px -->
-      <img class="page-header__image" src="./img/microplate-desktop@1x.png" alt="microplate">
+      <img class="page-header__image" src="./img/microplate-desktop@1x.png" loading="lazy" alt="microplate">
     </picture>
   </header>
 
@@ -146,7 +145,7 @@
         <source type="image/webp" srcset="./img/2005-desktop@1x.webp, ./img/2005-desktop@2x.webp 2x">
         <source srcset="./img/2005-desktop@1x.png, ./img/2005-desktop@2x.png 2x">
           <!-- 1x  147px: 2x 294px: -->
-        <img class="about__image" src="./img/2005-desktop@1x.png" width="145" height="317" alt="2005">
+        <img class="about__image" src="./img/2005-desktop@1x.png" width="145" height="317" loading="lazy" alt="2005">
       </picture>
       <h2 class="about__title">О компании</h2>
       <p class="about__description">
@@ -156,11 +155,11 @@
         Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__description-overflow">..</span><span class="about__description-overflow-hidden"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
       </p>
       <a class="about__more" href="#">ПОДРОБНЕЕ</a>
-      <img class="about__triangle about__triangle--1" src="./img/triangle.svg" width="300" height="300" alt=".">
-      <img class="about__triangle about__triangle--2" src="./img/triangle.svg" width="300" height="300" alt=".">
-      <img class="about__triangle about__triangle--3" src="./img/triangle.svg" width="300" height="300" alt=".">
-      <img class="about__triangle about__triangle--4" src="./img/triangle.svg" width="300" height="300" alt=".">
-      <img class="about__triangle about__triangle--5" src="./img/triangle.svg" width="300" height="300" alt=".">
+      <img class="about__triangle about__triangle--1" src="./img/triangle.svg" width="300" height="300" loading="lazy" alt=".">
+      <img class="about__triangle about__triangle--2" src="./img/triangle.svg" width="300" height="300" loading="lazy" alt=".">
+      <img class="about__triangle about__triangle--3" src="./img/triangle.svg" width="300" height="300" loading="lazy" alt=".">
+      <img class="about__triangle about__triangle--4" src="./img/triangle.svg" width="300" height="300" loading="lazy" alt=".">
+      <img class="about__triangle about__triangle--5" src="./img/triangle.svg" width="300" height="300" loading="lazy" alt=".">
     </section>
 
     <div class="service-content-wrapper desktop-wrapper-mixin">
@@ -177,7 +176,7 @@
                 <source media="(min-width: 768px)" srcset="./img/service-microplate-tablet@1x.jpg, ./img/service-microplate-tablet@2x.jpg 2x">
                 <source media="(min-width: 320px)" srcset="./img/service-microplate-mobile@1x.jpg, ./img/service-microplate-mobile@2x.jpg 2x">
                  <!-- 1x  370px: 2x 740px: -->
-                <img class="service__image" src="./img/service-microplate-desktop@1x.jpg" alt="microplate">
+                <img class="service__image" src="./img/service-microplate-desktop@1x.jpg" loading="lazy" alt="microplate">
               </picture>
           </article>
         </a>
@@ -192,7 +191,7 @@
               <source media="(min-width: 768px)" srcset="./img/service-mounting-tablet@1x.jpg, ./img/service-mounting-tablet@2x.jpg 2x">
               <source media="(min-width: 320px)" srcset="./img/service-mounting-mobile@1x.jpg, ./img/service-mounting-mobile@2x.jpg 2x">
               <!-- 1x  370px: 2x 740px: -->
-              <img class="service__image" src="./img/service-mounting-desktop@1x.jpg" alt="mountain">
+              <img class="service__image" src="./img/service-mounting-desktop@1x.jpg" loading="lazy" alt="mountain">
             </picture>
           </article>
         </a>
@@ -207,7 +206,7 @@
               <source media="(min-width: 768px)" srcset="./img/service-diode-tablet@1x.jpg, ./img/service-diode-tablet@2x.jpg 2x">
               <source media="(min-width: 320px)" srcset="./img/service-diode-mobile@1x.jpg, ./img/service-diode-mobile@2x.jpg 2x">
               <!-- 1x  370px: 2x 740px: -->
-              <img class="service__image" src="./img/service-diode-desktop@1x.jpg" alt="diode">
+              <img class="service__image" src="./img/service-diode-desktop@1x.jpg" loading="lazy" alt="diode">
             </picture>
           </article>
         </a>
@@ -220,7 +219,7 @@
           <source type="image/webp" srcset="./img/airplane-desktop@1x.webp, ./img/airplane-desktop@2x.webp 2x">
           <source srcset="./img/airplane-desktop@1x.png, ./img/airplane-desktop@2x.png 2x">
            <!-- 1x  668px: 2x 1338px: -->
-          <img class="feedback__image" src="./img/airplane-desktop@1x.png" width="668" height="493" alt="airplane">
+          <img class="feedback__image" src="./img/airplane-desktop@1x.png" width="668" height="493" loading="lazy" alt="airplane">
         </picture>
         <div class="feedback__form-wrapper">
           <h2 class="feedback__form-title">Остались вопросы? Задайте их нам!</h2>
@@ -352,9 +351,8 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/imask"></script>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/vendor-min.js"></script>
+    <script src="./js/main.js" async=""></script>
 
 </body>
 </html>
